@@ -3,6 +3,9 @@ app = Flask(__name__)
 
 numbers = {}
 
+@app.route("/", methods=['GET'])
+def root():
+    return jsonify('Numero API'), 200
 
 @app.route("/increment", methods=['POST'])
 def increment():
